@@ -1,0 +1,14 @@
+#exercicio 174:
+def main():
+    n = int(input("Digite n: "))
+    m = int(input("Digite m: "))
+    ant = n
+    atual = m
+    resto = atual % ant
+    while resto != 0:
+        resto = ant % atual
+        ant = atual
+        atual = resto
+
+    print(" O Maior Divisor Comum de(%d,%d) é igual a %d" %(n,m,ant))
+main()
